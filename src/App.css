@@ -1,0 +1,214 @@
+:root{
+  --Bright-Blue: hsl(220, 98%, 61%);
+  --Check-Background-1: hsl(192, 100%, 67%);
+  --Check-Background-2: hsl(280, 87%, 65%);
+
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Light-Grayish-Blue-Hover: hsl(236, 33%, 92%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue-1: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue-2: hsl(237, 14%, 26%);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding: 20px;
+  margin-top: 40px;
+  gap:30px;
+  max-width: 1420px;
+  width: 80%;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todos{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.todos > div{
+  padding: 20px;
+}
+
+.input-box{
+  width: 100%;
+  position: relative;
+}
+
+.input-box input{
+  width: 100%;
+  height: 20px;
+  padding: 30px 50px;
+  border-radius: 5px;
+  outline: none;
+  border:none;
+}
+
+span{
+  display: block;
+}
+
+.menu, 
+.single-todo,
+.sub-todo{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub-todo{
+  justify-content: flex-start;
+  gap:20px;
+}
+
+.single-todo{
+  gap: 20px;
+}
+
+.none{
+  display:none;
+}
+
+.inner-menu{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circle-check{
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  height:20px;
+  width:20px;
+  cursor: pointer;
+  border: 1px solid var(--Dark-Grayish-Blue);
+}
+
+.dark-circle-check:hover{
+  background: linear-gradient(var(--Very-Dark-Desaturated-Blue), var(--Very-Dark-Desaturated-Blue)) padding-box, linear-gradient(to right, var(--Check-Background-1), var(--Check-Background-2)) border-box;
+  border: 1px solid transparent;
+  border-radius: 5em;
+}
+
+.light-circle-check:hover{
+  background: linear-gradient(var(--Very-Light-Gray), var(--Very-Light-Gray)) padding-box, linear-gradient(to right, var(--Check-Background-1), var(--Check-Background-2)) border-box;
+  border: 1px solid transparent;
+  border-radius: 5em;
+}
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  height:20px;
+  width:20px;
+  top:50%;
+  left:0;
+  transform: translate(100%, -50%);
+  border: 1px solid var(--Dark-Grayish-Blue);
+}
+
+.rainbow{
+  background: linear-gradient(to right, var(--Check-Background-1), var(--Check-Background-2));
+}
+
+.header img,
+.inner-menu span,
+.clear-complete,
+.single-todo img{
+  cursor: pointer;
+}
+
+.dark-todos,
+.dark-input-box{
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  color:var(--Light-Grayish-Blue);
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.dark-single-todo{
+  border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
+}
+
+.light-todos,
+.light-input-box{
+  background-color: var(--Very-Light-Gray);
+  color:var(--Very-Dark-Grayish-Blue);
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.light-single-todo{
+  border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+.title{
+  color:var(--Very-Light-Gray);
+}
+
+.completed{
+  color:var(--Dark-Grayish-Blue);
+  text-decoration: line-through;
+}
+
+.menu{
+  color:var(--Dark-Grayish-Blue);
+}
+
+.active{
+  color:var(--Bright-Blue);
+}
+
+.light-out,
+.dark-out{
+  display: none;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding:20px;
+  justify-content: center;
+  border-radius: 5px;
+  color:var(--Dark-Grayish-Blue);
+}
+
+.light-out{
+  background-color: var(--Very-Light-Gray);
+}
+
+.dark-out{
+  background-color:var(--Very-Dark-Desaturated-Blue);
+}
+
+@media screen and (max-width:720px) {
+  .light-out,
+  .dark-out{
+    display:flex;
+  }
+
+  .inner-menu{
+    display: none;
+  }
+}

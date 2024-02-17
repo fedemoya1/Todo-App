@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.5;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  min-width: 375px;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size:contain;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.dark-body{
+  background-image: url(./assets/bg-desktop-dark.jpg);
+}
+
+.light-body{
+  background-image: url(./assets/bg-desktop-light.jpg);
+}
+
+#root{
+  display: flex;
+  place-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .dark-body{
+    background-image: url(./assets/bg-mobile-dark.jpg);
+  }
+  
+  .light-body{
+    background-image: url(./assets/bg-mobile-light.jpg);
+  } 
+}
